@@ -1,5 +1,7 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,42 +22,12 @@
     </nav>
     <div class="container mt-4 ls-destacados">
         <div class="row">
-            <div class="col-md-3 mb-4">
+            <div th:each="club : ${clubes}" class="col-md-3 mb-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/1200px-Boca_Juniors_logo18.svg.png" class="card-img-top" alt="...">
+                    <img th:src="${club.imagenUrl}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Club Atlético Boca Juniors</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/CA_river_plate_logo.svg/1200px-CA_river_plate_logo.svg.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Club Atlético River Plate</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Escudo_del_Club_Atl%C3%A9tico_Independiente_de_Avellaneda.svg/1200px-Escudo_del_Club_Atl%C3%A9tico_Independiente_de_Avellaneda.svg.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Club Atlético Independiente</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Escudo_de_Racing_Club_%282014%29.svg/1200px-Escudo_de_Racing_Club_%282014%29.svg.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Racing Club</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 th:text="${club.nombre}" class="card-title"></h5>
+                        <p  th:text="${club.descripcion}" class="card-text"></p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
