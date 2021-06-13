@@ -1,0 +1,6 @@
+insert into club
+(nombre                       , descripcion                                                                                     , imagen_url) values
+('Club Atlético Boca Juniors' , 'INFORMACION OBTENIDAD DESDE LA BASE DE DATOS, ETC, ETC, ETC, ETC, informacion desde la base de datos.' ,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/1200px-Boca_Juniors_logo18.svg.png'),
+('Club Atlético River Plate'  , 'INFORMACION OBTENIDAD DESDE LA BASE DE DATOS, ETC, ETC, ETC, ETC, informacion desde la base de datos.' ,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/CA_river_plate_logo.svg/1200px-CA_river_plate_logo.svg.png'),
+('Club Atlético Independiente', 'INFORMACION OBTENIDAD DESDE LA BASE DE DATOS, ETC, ETC, ETC, ETC, informacion desde la base de datos.' ,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Escudo_del_Club_Atl%C3%A9tico_Independiente_de_Avellaneda.svg/1200px-Escudo_del_Club_Atl%C3%A9tico_Independiente_de_Avellaneda.svg.png'),
+('Racing Club'                , 'INFORMACION OBTENIDAD DESDE LA BASE DE DATOS, ETC, ETC, ETC, ETC, informacion desde la base de datos.' ,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Escudo_de_Racing_Club_%282014%29.svg/1200px-Escudo_de_Racing_Club_%282014%29.svg.png');
