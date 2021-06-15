@@ -17,7 +17,11 @@
     <!-- As a link -->
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="/">Clubes</a>
+            <form th:action="@{/clubesPorNombre}" class="d-flex">
+                <input name="nombre" class="form-control me-2" type="search" th:placeholder="${param.nombre}" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
         </div>
     </nav>
     <div class="container mt-4 ls-destacados">

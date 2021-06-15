@@ -28,4 +28,10 @@ public class ListadoController {
         model.addAttribute("clubes", this.clubService.obtenerClubesPorCategoria(categoriaId));
         return "listado";
     }
+
+    @RequestMapping("/clubesPorNombre")
+    public String listarClubesPorCategoria(String nombre, Model model){
+        model.addAttribute("clubes", this.clubService.obtenerClubesPorNombre(nombre));
+        return "listado";
+    }
 }
