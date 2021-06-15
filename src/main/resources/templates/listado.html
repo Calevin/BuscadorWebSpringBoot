@@ -28,7 +28,7 @@
                     <div class="card-body">
                         <h5 th:text="${club.nombre}" class="card-title"></h5>
                         <p>
-                            <span th:text="${club.categoria.nombre}" class="badge rounded-pill bg-success"></span>
+                            <a th:href="@{/clubesPorCategoria(categoriaId=${club.categoria.id})}" th:text="${club.categoria.nombre}" class="badge rounded-pill bg-success"></a>
                         </p>
                         <p  th:text="${club.descripcion}" class="card-text"></p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>

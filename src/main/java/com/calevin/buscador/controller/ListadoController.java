@@ -18,8 +18,14 @@ public class ListadoController {
     }
 
     @RequestMapping("/")
-    public String listarVidejuegos(Model model){
+    public String listarClubes(Model model){
         model.addAttribute("clubes", this.clubService.obtenerClubes());
+        return "listado";
+    }
+
+    @RequestMapping("/clubesPorCategoria")
+    public String listarClubesPorCategoria(Long categoriaId, Model model){
+        model.addAttribute("clubes", this.clubService.obtenerClubesPorCategoria(categoriaId));
         return "listado";
     }
 }
