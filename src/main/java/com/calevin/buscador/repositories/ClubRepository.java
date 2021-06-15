@@ -10,4 +10,6 @@ public interface ClubRepository extends JpaRepository<Club, Long> {
 
     @Query("from Club c where c.categoria.id = ?1 order by c.nombre")
     List<Club> buscarPorCategoria(Long categoriaId);
+
+    List<Club> findByNombreContainingIgnoreCaseOrderByNombreAsc(String nombre);
 }

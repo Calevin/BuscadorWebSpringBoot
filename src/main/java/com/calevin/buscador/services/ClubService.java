@@ -23,4 +23,7 @@ public class ClubService {
         return this.clubRepository.buscarPorCategoria(categoriaId);
     }
 
+    public List<Club> obtenerClubesPorNombre(String nombre){
+        return this.clubRepository.findByNombreContainingIgnoreCaseOrderByNombreAsc(nombre);
+    }
 }
